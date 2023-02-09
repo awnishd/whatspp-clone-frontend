@@ -13,7 +13,7 @@ const AccountProvider = ({ children }) => {
     const [newMessageFlag, setNewMessageFlag] = useState(false);
 
     useEffect(() => {
-        socket.current = io('ws://localhost:9000');
+        socket.current = io('ws://whatsappsocket-vrl2.onrender.com');
     }, [])
 
     return (
