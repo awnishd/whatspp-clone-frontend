@@ -11,9 +11,10 @@ const AccountProvider = ({ children }) => {
     const [person, setPerson] = useState({});
     const socket = useRef();
     const [newMessageFlag, setNewMessageFlag] = useState(false);
+    const ENDPOINT="https://whataspp.onrender.com";
 
     useEffect(() => {
-        socket.current = io('https://whataspp.onrender.com');
+        socket.current = io(ENDPOINT,{ transports: ['websocket'] });
     }, [])
 
     return (
